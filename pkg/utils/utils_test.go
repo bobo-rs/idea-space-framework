@@ -16,3 +16,8 @@ func TestHashMd5(t *testing.T) {
 	fmt.Println(HashMd5(`淘宝`,`12`))
 }
 
+func TestAlphaNum(t *testing.T) {
+	fmt.Println(AlphaNum(`手机手机放还减肥是减肥`))
+
+	fmt.Println(AlphaNum(`fhjsfhjkshfjs12312312`))
+}
