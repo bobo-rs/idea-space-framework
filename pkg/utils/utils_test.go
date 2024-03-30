@@ -21,3 +21,17 @@ func TestAlphaNum(t *testing.T) {
 
 	fmt.Println(AlphaNum(`fhjsfhjkshfjs12312312`))
 }
+
+func TestArrayColumns(t *testing.T) {
+	slices := make([]map[string]interface{}, 0)
+	slices = append(slices, map[string]interface{}{
+		`id`: 4,
+		`name`: `哈哈哈哈`,
+	})
+	fmt.Println(ArrayColumns(slices, "id"))
+
+	sMap, _ := ColumnMap(slices, `name`)
+	sMap1, _ := ColumnMap(slices, `id`)
+	fmt.Println(sMap, sMap[`哈哈哈哈`])
+	fmt.Println(sMap1, sMap1[4])
+}
