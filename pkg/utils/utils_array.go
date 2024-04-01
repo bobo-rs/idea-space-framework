@@ -76,7 +76,7 @@ func (a *sArray) ArrayColumnsUniqueUnit(field string) []uint {
 	if len(slices) == 0 {
 		return nil
 	}
-	arr := make([]uint, len(slices))
+	arr := make([]uint, 0)
 	for _, slice := range slices{
 		switch v := slice.(type) {
 		case uint:
@@ -93,7 +93,7 @@ func (a sArray) ArrayColumnsUniqueString(field string) []string {
 	if len(slices) == 0 {
 		return nil
 	}
-	arr := make([]string, len(slices))
+	arr := make([]string, 0)
 	for _, slice := range slices{
 		switch v := slice.(type) {
 		case string:
