@@ -28,10 +28,10 @@ func TestArrayColumns(t *testing.T) {
 		`id`: 4,
 		`name`: `哈哈哈哈`,
 	})
-	fmt.Println(ArrayColumns(slices, "id"))
+	fmt.Println(NewArray(slices).ArrayColumns( "id"))
 
-	sMap, _ := ColumnMap(slices, `name`)
-	sMap1, _ := ColumnMap(slices, `id`)
+	sMap, _ := NewArray(slices).ColumnMap( `name`)
+	sMap1, _ := NewArray(slices).ColumnMap( `id`)
 	fmt.Println(sMap, sMap[`哈哈哈哈`])
 	fmt.Println(sMap1, sMap1[4])
 }

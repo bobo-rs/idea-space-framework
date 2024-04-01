@@ -68,3 +68,39 @@ func (a sArray) ArrayColumnsUnique(field string) []interface{} {
 	}
 	return slicesUni
 }
+
+// ArrayColumnsUniqueUnit 数组集合转Uint类型
+func (a *sArray) ArrayColumnsUniqueUnit(field string) []uint {
+	// 处理数据
+	slices := a.ArrayColumnsUnique(field)
+	if len(slices) == 0 {
+		return nil
+	}
+	arr := make([]uint, len(slices))
+	for _, slice := range slices{
+		switch v := slice.(type) {
+		case uint:
+			arr = append(arr, v)
+		}
+	}
+	return arr
+}
+
+// ArrayColumnsUniqueString 数组集合转String类型
+func (a sArray) ArrayColumnsUniqueString(field string) []string {
+	// 处理数据
+	slices := a.ArrayColumnsUnique(field)
+	if len(slices) == 0 {
+		return nil
+	}
+	arr := make([]string, len(slices))
+	for _, slice := range slices{
+		switch v := slice.(type) {
+		case string:
+			arr = append(arr, v)
+		default:
+			arr = append(arr, gconv.String(v))
+		}
+	}
+	return arr
+}
