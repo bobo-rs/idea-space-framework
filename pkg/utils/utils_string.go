@@ -1,7 +1,7 @@
 package utils
 
 import (
-	"github.com/bobo-rs/idea-space-framework/pkg/encrypt"
+	"gitee.com/bobo-rs/idea-space-framework/pkg/encrypt"
 	"github.com/gogf/gf/v2/errors/gerror"
 	"strings"
 	"unicode"

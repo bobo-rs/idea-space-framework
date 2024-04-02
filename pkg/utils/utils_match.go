@@ -1,7 +1,7 @@
 package utils
 
 import (
-	"github.com/bobo-rs/idea-space-framework/consts"
+	"gitee.com/bobo-rs/idea-space-framework/consts"
 	"regexp"
 )
 
