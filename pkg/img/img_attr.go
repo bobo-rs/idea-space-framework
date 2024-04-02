@@ -5,6 +5,9 @@ import (
 	"github.com/gogf/gf/v2/errors/gerror"
 	"github.com/gogf/gf/v2/os/gfile"
 	"image"
+	_ "image/gif"  // 导入gif解码器
+	_ "image/jpeg" // 导入jpeg解码器
+	_ "image/png"  // 导入png解码器
 	"os"
 )
 
