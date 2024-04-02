@@ -35,3 +35,10 @@ func TestArrayColumns(t *testing.T) {
 	fmt.Println(sMap, sMap[`哈哈哈哈`])
 	fmt.Println(sMap1, sMap1[4])
 }
+
+func TestNewArray(t *testing.T) {
+	ImageExts := []string{`jpg`, `jpeg`, `png`, `webp`, `gif`}
+
+	fmt.Println(NewArray(ImageExts).IsExists(`png`))
+	fmt.Println(NewArray(ImageExts).MustIsExists(`p.ng`))
+}

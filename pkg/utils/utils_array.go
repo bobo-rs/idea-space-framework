@@ -107,8 +107,8 @@ func (a sArray) ArrayColumnsUniqueString(field string) []string {
 
 // IsExists 验证指定值是否存在数组数列中
 func (a sArray) IsExists(i interface{}) (bool, error) {
-	arr, ok := a.Data.([]interface{})
-	if !ok {
+	arr := gconv.SliceAny(a.Data)
+	if len(arr) == 0 {
 		return false, gerror.New(`Array IsExists 格式错误`)
 	}
 	// 转换为字符串
