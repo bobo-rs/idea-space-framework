@@ -60,7 +60,7 @@ func ReadImageAttr(path string) (attr *ImageAttr, err error) {
 // IsValidImageExt 验证图片扩展
 func IsValidImageExt(ext string) bool {
 	switch ImageExt(ext) {
-	case ImageExtGif, ImageExtJpeg, ImageExtPng:
+	case ImageExtGif, ImageExtJpeg, ImageExtPng, ImageExtJpg:
 		return true
 	default:
 		return false
