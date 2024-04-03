@@ -11,7 +11,6 @@ type ImageAttr struct {
 	Width int
 	Height int
 	Size int64
-	Hash string
 }
 
 // IsValidImageExt 验证图片扩展
